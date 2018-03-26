@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "MDPatient.h"
+#import "MDDancer.h"
+#import "MDDeveloper.h"
+#import "MDStudent.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +21,57 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    MDDancer* dancer1 = [[MDDancer alloc] init];
+    MDDancer* dancer2 = [[MDDancer alloc] init];
+    
+    MDStudent* student1 = [[MDStudent alloc] init];
+    MDStudent* student2 = [[MDStudent alloc] init];
+    MDStudent* student3 = [[MDStudent alloc] init];
+    
+    MDDeveloper* developer1 = [[MDDeveloper alloc ]init];
+    
+    dancer1.name = @"dancer 1";
+    dancer2.name = @"dancer 2";
+    
+    student1.name = @"student 1";
+    student2.name = @"student 2";
+    student3.name = @"student 3";
+    
+    developer1.name = @"developer 1";
+    
+    NSObject* fake = [[NSObject alloc] init];
+    
+    NSArray* patients = [NSArray arrayWithObjects: fake, dancer1, dancer2, student1, student2, student3,
+                         developer1,nil];
+    
+    for (id <MDPatient> patient in patients) {
+        
+        if ([patient conformsToProtocol:@protocol(MDPatient)]) {
+            
+            if ([patient respondsToSelector: @selector (howIsYourFamily)]) {
+                NSLog(@"How is your family? \n%@", [patient howIsYourFamily]);
+            }
+            
+            if ([patient respondsToSelector: @selector (howIsYourJob)]) {
+                NSLog(@"How is your job? \n%@", [patient howIsYourJob]);
+            }
+            
+            
+            if ( ! [patient areYouOk]) {
+                [patient takePill];
+                
+                if (! [patient areYouOk]) {
+                    [patient makeShot];
+                }
+            }
+        }
+        }else {
+        NSLog(@"FAKE!");
+    }
+    
+    
+    
     return YES;
 }
 

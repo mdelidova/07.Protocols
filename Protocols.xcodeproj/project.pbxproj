@@ -13,6 +13,9 @@
 		24660D1F2068266200E43C2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24660D1E2068266200E43C2A /* Assets.xcassets */; };
 		24660D222068266200E43C2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24660D202068266200E43C2A /* LaunchScreen.storyboard */; };
 		24660D252068266200E43C2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24660D242068266200E43C2A /* main.m */; };
+		24660D2D206828D000E43C2A /* MDStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 24660D2C206828D000E43C2A /* MDStudent.m */; };
+		24660D302068296400E43C2A /* MDDancer.m in Sources */ = {isa = PBXBuildFile; fileRef = 24660D2F2068296400E43C2A /* MDDancer.m */; };
+		24660D33206829BB00E43C2A /* MDDeveloper.m in Sources */ = {isa = PBXBuildFile; fileRef = 24660D32206829BB00E43C2A /* MDDeveloper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,13 @@
 		24660D212068266200E43C2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24660D232068266200E43C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24660D242068266200E43C2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		24660D2B206828D000E43C2A /* MDStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDStudent.h; sourceTree = "<group>"; };
+		24660D2C206828D000E43C2A /* MDStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDStudent.m; sourceTree = "<group>"; };
+		24660D2E2068296400E43C2A /* MDDancer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDDancer.h; sourceTree = "<group>"; };
+		24660D2F2068296400E43C2A /* MDDancer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDDancer.m; sourceTree = "<group>"; };
+		24660D31206829BB00E43C2A /* MDDeveloper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDDeveloper.h; sourceTree = "<group>"; };
+		24660D32206829BB00E43C2A /* MDDeveloper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDDeveloper.m; sourceTree = "<group>"; };
+		24660D342068BDBE00E43C2A /* MDPatient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDPatient.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,13 @@
 		24660D142068266200E43C2A /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				24660D342068BDBE00E43C2A /* MDPatient.h */,
+				24660D2B206828D000E43C2A /* MDStudent.h */,
+				24660D2C206828D000E43C2A /* MDStudent.m */,
+				24660D2E2068296400E43C2A /* MDDancer.h */,
+				24660D2F2068296400E43C2A /* MDDancer.m */,
+				24660D31206829BB00E43C2A /* MDDeveloper.h */,
+				24660D32206829BB00E43C2A /* MDDeveloper.m */,
 				24660D152068266200E43C2A /* AppDelegate.h */,
 				24660D162068266200E43C2A /* AppDelegate.m */,
 				24660D182068266200E43C2A /* ViewController.h */,
@@ -144,6 +161,9 @@
 			files = (
 				24660D1A2068266200E43C2A /* ViewController.m in Sources */,
 				24660D252068266200E43C2A /* main.m in Sources */,
+				24660D302068296400E43C2A /* MDDancer.m in Sources */,
+				24660D33206829BB00E43C2A /* MDDeveloper.m in Sources */,
+				24660D2D206828D000E43C2A /* MDStudent.m in Sources */,
 				24660D172068266200E43C2A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
