@@ -18,7 +18,6 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
@@ -47,27 +46,28 @@
     
     for (id <MDPatient> patient in patients) {
         if ([patient conformsToProtocol:@protocol(MDPatient)]) {
-            
-            if ([patient respondsToSelector: @selector (howIsYourFamily)]) {
-                NSLog(@"How is your family? \n%@", [patient howIsYourFamily]);
+            if ([patient respondsToSelector:@selector(howIsYourFamily)]) {
+                NSLog(@"How is your family?");
             }
             
-            if ([patient respondsToSelector: @selector (howIsYourJob)]) {
-                NSLog(@"How is your job? \n%@", [patient howIsYourJob]);
+            if ([patient respondsToSelector:@selector(howIsYourJob)]) {
+                NSLog(@"How is your job?");
             }
             
-            
-            if ( ! [patient areYouOk]) {
+            if (! [patient areYouOk]) {
                 [patient takePill];
-                
-                if (! [patient areYouOk]) {
-                    [patient makeShot];
-                }
             }
-        }else {
-            NSLog(@"FAKE!!!");
+            if (! [patient areYouOk]) {
+                [patient makeShot];
+            }
         }
+        
+    } else {
+        NSLog(@"FAKE!!!");
+    }
+    
     return YES;
+}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -97,5 +97,3 @@
 }
 
 @end
-    
-    
