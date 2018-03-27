@@ -60,9 +60,7 @@
             if (! [patient areYouOk]) {
                 [patient makeShot];
             }
-        }
-        
-     else {
+        }else {
         NSLog(@"FAKE!!!");
     }
     }
